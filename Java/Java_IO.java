@@ -39,11 +39,11 @@ Source  ----->  Read Operation (0101010) ----->  Java Appliation  ------> Output
   An output stream accepts output bytes and sends them to some sink.
 
 - Useful methods of OutputStream
-					Method									Description
+	Method									Description
 1) public void write(int) throws IOException		is used to write a byte to the current output stream.
 2) public void write(byte[]) throws IOException		is used to write an array of byte to the current output stream.
 3) public void flush() throws IOException	    	flushes the current output stream.
-4) public void close() throws IOException	   	 	is used to close the current output stream.
+4) public void close() throws IOException	   	is used to close the current output stream.
 
 
 // InputStream class
@@ -51,16 +51,17 @@ Source  ----->  Read Operation (0101010) ----->  Java Appliation  ------> Output
 
 - Useful methods of InputStream
 
-					Method									Description
+	Method							  Description
 1) public abstract int read()throws IOException			reads the next byte .
-2) public int available()throws IOException				returns number of available bytes.
-3) public void close()throws IOException				is used to close the current input stream.
+2) public int available()throws IOException			returns number of available bytes.
+3) public void close()throws IOException			is used to close the current input stream.
 
 
 // FileInputStream and FileOutputStream
 - used to read and write data in a file.
 - Prefer this when primitive datatype values are to be written.
-- if we use char oriented data then it is prefer to use FileWriter and FileReader class but if we use byte and char then we use FileInputStream and FileOutputStream class
+- if we use char oriented data then it is prefer to use FileWriter and FileReader class but if we use byte and char then we use FileInputStream and 
+   FileOutputStream class
 
 
 
@@ -236,7 +237,8 @@ class File_Read_Write{
 
 
 // Java ByteArrayOutputStream Class
-- Java ByteArrayOutputStream class is used to write common data into multiple files. In this stream, the data is written into a byte array which can be written to multiple streams.
+- Java ByteArrayOutputStream class is used to write common data into multiple files. In this stream, the data is written into a byte array which can be
+   written to multiple streams.
 */
 
  class DataStreamExample {  
@@ -245,7 +247,8 @@ public static void main(String args[]) throws Exception{
       FileOutputStream fout2=new FileOutputStream("f2.txt");    
         
       ByteArrayOutputStream bout=new ByteArrayOutputStream();    
-      bout.write(123);    // write method se 123 value goes into bout object and this bout object call writeTo method means we have to force the value of bout to fout1 and fout2
+      bout.write(123);    // write method se 123 value goes into bout object and this bout object call writeTo method means we have to force the value of
+	                   //bout to fout1 and fout2
       bout.writeTo(fout1);    // and  the  internal wroking of fout is to write the value in f1.txt and fout2 write in f2.txt with the help of writeTo method
       bout.writeTo(fout2);    
         
@@ -313,7 +316,8 @@ System.out.println("Password is: "+pass);
 
 
 // PrintStream class
-- The PrintStream class provides methods to write data to another stream. The PrintStream class automatically flushes the data so there is no need to call flush() method. Moreover, its methods don't throw IOException.
+- The PrintStream class provides methods to write data to another stream. The PrintStream class automatically flushes the data so there is no need to 
+   call flush() method. Moreover, its methods don't throw IOException.
 */
 
 // Example of java.io.PrintStream class
@@ -342,48 +346,6 @@ class PrintStreamTest2{
       
  }  
 }   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
