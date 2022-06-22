@@ -3,8 +3,8 @@ package com.training;
 /*
 
 //Java Control Statements 
-- Java compiler executes the code from top to bottom. The statements in the code are executed according to the order in which they appear.
-However, Java provides statements that can be used to control the flow of Java code. Such statements are called control flow statements. 
+- Java compiler executes the code from top to bottom. The statements in the code are executed according to the order in which they appear. However, Java provides 
+  statements that can be used to control the flow of Java code. Such statements are called control flow statements. 
 - It is one of the fundamental features of Java, which provides a smooth flow of program.
 
 Java provides three types of control flow statements.
@@ -101,7 +101,7 @@ System.out.println("x + y is greater than 20");
 c) if-else-if ladder:
 - The if-else-if statement contains the if-statement followed by multiple else-if statements.
 - In other words, we can say that it is the chain of if-else statements that create a decision tree where the program may enter in the block of code
-where the condition is true.
+  where the condition is true.
 - We can also define an else statement at the end of the chain.
 
 
@@ -307,8 +307,8 @@ c) Java while loop
 - However, if we don't know the number of iterations in advance, it is recommended to use a while loop.
 - Unlike for loop, the initialization and increment/decrement doesn't take place inside the loop statement in while loop.
 
-- It is also known as the entry-controlled loop since the condition is checked at the start of the loop. If the condition is true, then the loop
-body will be executed; otherwise, the statements after the loop will be executed.
+- It is also known as the entry-controlled loop since the condition is checked at the start of the loop. If the condition is true, then the loop body will 
+    be executed; otherwise, the statements after the loop will be executed.
 
 syntax:.
 
