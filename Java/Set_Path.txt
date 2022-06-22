@@ -1,0 +1,44 @@
+
+
+
+Question:- How to set path in Java
+
+- The path is required to be set for using tools such as javac, java, etc.
+- If you are saving the Java source file inside the JDK/bin directory, the path is not required to be set because all the tools will be available in the
+  current directory.
+- However, if you have your Java file outside the JDK/bin folder, it is necessary to set the path of JDK.
+
+There are two ways to set the path in Java:
+
+1) Temporary
+2) Permanent
+
+1) Set the Temporary Path of JDK in Windows
+
+To set the temporary path of JDK, you need to follow the following steps:
+
+a) Open the command prompt
+b) Copy the path of the JDK/bin directory
+c) Write in command prompt: set path=copied_path
+For Example:
+set path=C:\Program Files\Java\jdk1.6.0_23\bin
+
+
+2) Set Permanent Path of JDK in Windows
+
+For setting the permanent path of JDK, you need to follow these steps:
+
+Go to MyComputer properties -> advanced tab -> environment variables -> new tab of user variable -> write path in variable name ->
+                             ->write path of bin folder in variable value -> ok -> ok -> ok
+
+For Example:
+a) Go to MyComputer properties
+b) Click on the advanced tab
+c) Click on environment variables
+d) Click on the new tab of user variables
+e) Write the path in the variable name
+f) Copy the path of bin folder
+g) Paste path of bin folder in the variable value
+h) Click on ok button
+i) Click on ok button
+

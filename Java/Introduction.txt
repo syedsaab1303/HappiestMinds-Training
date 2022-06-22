@@ -1,0 +1,51 @@
+
+Question- What is java?
+Answer- 
+-> Java is a class-based object-oriented programming language.
+-> Though we can not consider it to be fully object-oriented as it supports primitive data types, and these primitive data types don't directly belong to the Integer 
+   classes.
+-> Java is a High level programming language.Java is a platform because it has its own runtime environment that is JVM(Java Virtual Machine).
+-> JVM provides a platform which  accepts the  byte code and executes on the machine.
+
+
+Question- Features of Java?
+Answer- 
+1)Platform Independent:- 
+- Java is a platform independent(write once run anywhere). 
+- Java code can be executed on multiple platforms, for example, Windows, Linux ,  Mac/OS, etc.
+- Java code is compiled by the compiler and converted into bytecode. 
+- This bytecode is a platform-independent code because it can be run on multiple platforms, for  example Windows, Linux, or macOS this means that we can compile a
+  program on windows then we can run it on Linux as well, and so on.
+
+2)Portable:- Java is portable because it facilitates you to carry the Java bytecode to any platform. It doesn't require any implementation.
+
+3)Secure:- 
+a) JVM:- - JVM is Java Virtual Machine.
+         - Its basic role is to verify the bytecode before it is run. This make sure that program is not making any unsafe operations . 
+	 - for eg. a program go to wrong location and fetch data instead of information.
+	 - JVM reduce the loop hole and safety flaws in memories.
+		     
+b) Security Manager:- - Security Manager layer is present in JVM.
+ 		      - It make sure that the untrusted code doesnt manage to access some APIs and features of the  platform.
+       
+c) No Pointers:- Java Does not support pointers. In this hacker does not point the memory address and the things which is stored in the memory is become safe.
+	   
+d) Access Modifiers:- If we want to hide some code then we use access modifier, if we want that our code or data should not be override then we use  final 
+	              keyword, which again adds security to java.                                                                                             
+	   
+e) Exception Handling:- In this if our code have minor exception also then also our code is not compiled.
+          
+4) Object Oriented : Java is based on OOPs concept through this the Software quality and productivity increased and maintainance cost is decreased.
+
+5) Robust:- Java can handle all type of exception that's why it is robust and beacause of it, it will decrese the chance of crashing software.
+
+6) Multithreading:- It will increase the speed and performance of software,  beacause in multithreading we can divide the task into many subtasks.
+
+7) Java is simple as compared to c and c++ because some features work automatically in java like memory management and garbage collection and java does not
+   contain any complex features like pointers, multiple inheritances, operator overloading, etc.
+   
+   
+   
+   
+   
+   
