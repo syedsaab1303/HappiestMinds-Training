@@ -347,7 +347,7 @@ eating...
 
 2) Multilevel Inheritance Example
 - When there is a chain of inheritance, it is known as multilevel inheritance.
-- As you can see in the example given below, BabyDog class inherits the Dog class which again inherits the Animal class, so there is                    a multilevel inheritance.
+- As you can see in the example given below, BabyDog class inherits the Dog class which again inherits the Animal class, so there is a multilevel inheritance.
 
 File: TestInheritance2.java
 
@@ -407,9 +407,11 @@ eating...
 
 Q) Why multiple inheritance is not supported in java?
 - To reduce the complexity and simplify the language, multiple inheritance is not supported in java. 
-- Consider a scenario where A, B, and C are three classes. The C class inherits A and B classes. If A and B classes have the same method and you call it from child class object, there will be ambiguity to call the method of A or B class.
+- Consider a scenario where A, B, and C are three classes. The C class inherits A and B classes. If A and B classes have the same method and you call it from 
+    child class object, there will be ambiguity to call the method of A or B class.
 
-- Since compile-time errors are better than runtime errors, Java renders compile-time error if you inherit 2 classes. So whether you have same method or different, there will be compile time error.
+- Since compile-time errors are better than runtime errors, Java renders compile-time error if you inherit 2 classes. So whether you have same method or different,
+  there will be compile time error.
 
 class A{  
 void msg(){System.out.println("Hello");}  
@@ -446,8 +448,10 @@ output:
 - There can be only one super classs, not more than that because java does not support multiple inheritance
  
 Below does not take part in inheritance:
-1) Constructors: A subclass inherits all the members (fields, methods, and nested classes) from its superclass. Constructors are not members, so they are   not inherited by subclasses, but the constructor of the superclass can be invoked from the subclass.
-2) Private members: A subclass does not inherit the private members of its parent class. However, if the superclass has public or protected methods   (like getters and setters) for accessing its private fields, these can also be used by the subclass.
+1) Constructors: A subclass inherits all the members (fields, methods, and nested classes) from its superclass. Constructors are not members, so they are   
+  not inherited by subclasses, but the constructor of the superclass can be invoked from the subclass.
+2) Private members: A subclass does not inherit the private members of its parent class. However, if the superclass has public or protected methods  
+  (like getters and setters) for accessing its private fields, these can also be used by the subclass.
 
 
 
@@ -470,19 +474,19 @@ Below does not take part in inheritance:
 
 // Method overloading  				       Method  overriding
 
-1) Same name						     1)  Same name			
+1) Same name					       1)  Same name			
 
-2) Same class						   	 2)  different class
+2) Same class					       2)  different class
 
-3) Different arguments				     3)  same arguments
+3) Different arguments				       3)  same arguments
 
-- No.of argument.					     -   No.of argument.
+- No.of argument.					 -   No.of argument.
 
-- Sequence of argument.				     -   Sequence of argument.	
+- Sequence of argument.				         -  Sequence of argument.	
 
-- Type of argument.					   	 -   Type of argument.					
+- Type of argument.					 -   Type of argument.					
 
-							   			 4)  Inheritance (IS-A relationship) 
+						       4)  Inheritance (IS-A relationship) 
 
 
 1) Method Overloading or compile time polymorphism Exaxmple
@@ -511,7 +515,8 @@ t.show(10,20);
 2) Runtime Polymorphism in Java
 Runtime polymorphism or Dynamic Method Dispatch is a process in which a call to an overridden method is resolved at runtime rather than compile-time.
 
-In this process, an overridden method is called through the reference variable of a superclass. The determination of the method to be called is based on the object being referred to by the reference variable.
+In this process, an overridden method is called through the reference variable of a superclass. The determination of the method to be called is based on the
+ object being referred to by the reference variable.
 
 
 // Upcasting
@@ -619,7 +624,8 @@ eating meat...
 // Covariant return type
 
 - Before Java5, we can't change the return type of overridden method.
-- But now, since Java5 new concept introduced in java called co-varient where we can change the  return type of overriding method   but child class return type should be a subtype of parent class return  type.
+- But now, since Java5 new concept introduced in java called co-varient where we can change the  return type of overriding method   but child class return
+  type should be a subtype of parent class return  type.
 
 - For example:
 
@@ -721,7 +727,8 @@ Output:
 eating...
 barking...
 
-In the above example Animal and Dog both classes have eat() method if we call eat() method from Dog class, it will call the eat() method of Dog class by default because priority is given to local.
+In the above example Animal and Dog both classes have eat() method if we call eat() method from Dog class, it will call the eat() method of Dog class by 
+  default because priority is given to local.
 
 
 3) super is used to invoke parent class constructor.
@@ -807,9 +814,12 @@ class Bike8{
 Output:instance initializer block invoked
        constructor is invoked
   
-- In the above example, it seems that instance initializer block is firstly invoked but NO. Instance intializer block is invoked at the time of object creation.The java compiler copies the instance initializer block in the constructor after the first statement super(). So firstly, constructor is invoked. 
+- In the above example, it seems that instance initializer block is firstly invoked but NO. Instance intializer block is invoked at the time of object creation.
+  The java compiler copies the instance initializer block in the constructor after the first statement super(). So firstly, constructor is invoked. 
 
-- IMP Note: This is a diplomatic answer because first initialization block is invoke  but  the code of initialization block is copied by compiler in constructor  before the constructor code so first constructor block invoke with initialization code.So the conclusion is first constructor block is execute but first  initializationblock code is displayed.
+- IMP Note: This is a diplomatic answer because first initialization block is invoke  but  the code of initialization block is copied by compiler in constructor
+  before the constructor code so first constructor block invoke with initialization code.So the conclusion is first constructor block is execute but first 
+  initializationblock code is displayed.
 
 Note: The java compiler copies the code of instance initializer block in every constructor.
 
@@ -864,7 +874,8 @@ c) class
 - If you make any variable as final, you cannot change the value of final variable(It will be constant).
 
 Example of final variable
-There is a final variable speedlimit, we are going to change the value of this variable, but It can't be changed because final variable once assigned a value can never be changed.
+There is a final variable speedlimit, we are going to change the value of this variable, but It can't be changed because final variable once assigned a value 
+ can never be changed.
 
 
 class Bike9{  
@@ -1246,7 +1257,8 @@ output:
 
 
 // How to declare an interface?
-- An interface is declared by using the interface keyword. It provides total abstraction; means all the methods in an interface are declared with the  empty body, and all the fields are public, static and final by default. 
+- An interface is declared by using the interface keyword. It provides total abstraction; means all the methods in an interface are declared with the  
+   empty body, and all the fields are public, static and final by default. 
 - A class that implements an interface must implement all the methods declared in the interface.
 
 Syntax:
@@ -1322,7 +1334,8 @@ Output:Hello
 
 
 Q) Multiple inheritance is not supported through class in java, but it is possible by an interface, why?
--  multiple inheritance is not supported in the case of class because of ambiguity. However, it is supported in case of an interface because there is no ambiguity. It is because its implementation is provided by the implementation class. For example:
+-  multiple inheritance is not supported in the case of class because of ambiguity. However, it is supported in case of an interface because there is no ambiguity. 
+	It is because its implementation is provided by the implementation class. For example:
 
 interface Printable{  
 void print();  
@@ -1381,25 +1394,25 @@ interface printable{
 
 Abstract class	                                                                		            Interface
 1) Abstract class can have abstract and non-abstract methods.	                		Interface can have only abstract methods.
-																				        Since Java 8,it can have default and static
-																				         methods also.
+						                                                Since Java 8,it can have default and static methods also.
+												
 2) Abstract class doesn't support multiple inheritance.                       			Interface supports multiple inheritance.
 3) Abstract class can have final, non-final, static and non-static variables.			Interface has only static and final
-																					    variables.
+												variables.
 4) Abstract class can provide the implementation of interface.	                		Interface can't provide the implementation
-																						 of abstract class.
+												of abstract class.
 5) The abstract keyword is used to declare abstract class.                     			The interface keyword is used to declare 
-																						interface.
+												interface.
 6) An abstract class can extend another Java class and implement multiple Java interfaces.	An interface can extend another
-																						 Java interface only.
+												 Java interface only.
 7) An abstract class can be extended using keyword "extends".	                		An interface can be implemented using
-																						 keyword "implements".
+												 keyword "implements".
 8) A Java abstract class can have class members like private, protected, etc.			Members of a Java interface are public 
-																						by default.
-9)Example:   																			9)	Example:
-public abstract class Shape{ 															public interface Drawable{
-public abstract void draw();																void draw();
-} 																								}
+												by default.
+9)Example:   											9)	Example:
+public abstract class Shape{ 										public interface Drawable{
+public abstract void draw();										void draw();
+} 													}
 
 
 
@@ -1452,14 +1465,16 @@ Output:
 
 - Binding (or wrapping) code and data together into a single unit are known as encapsulation.
 - For example, a capsule, it is wrapped with different medicines.
-- We can create a fully encapsulated class in Java by making all the data members of the class private. Now we can use setter and getter methods to  set and get the data in it.
+- We can create a fully encapsulated class in Java by making all the data members of the class private. Now we can use setter and getter methods to  set and get 
+  the data in it.
 - Java bean is the fully encapsulated class because all the data members are private here.
 
 
 // Advantage of Encapsulation in Java
 - By providing only a setter or getter method, you can make the class read-only or write-only. In other words, you can skip the getter or setter methods.
 
-- It provides you the control over the data. Suppose you want to set the value of id which should be greater than 100 only, you can write the logic inside the setter method. You can write the logic not to store the negative numbers in the setter methods.
+- It provides you the control over the data. Suppose you want to set the value of id which should be greater than 100 only, you can write the logic inside the 
+   setter method. You can write the logic not to store the negative numbers in the setter methods.
 
 - It is a way to achieve data hiding in Java because other class will not be able to access the data through the private data members.
 
@@ -1524,7 +1539,8 @@ If you are not using any IDE, you need to follow the syntax given below:
 
 For example
 javac -d . Simple.java  
-- The -d switch specifies the destination where to put the generated class file. You can use any directory name like /home (in case of Linux),d:/abc (in case of windows) etc. If you want to keep the package within the same directory, you can use . (dot).
+- The -d switch specifies the destination where to put the generated class file. You can use any directory name like /home (in case of Linux),d:/abc 
+  (in case of windows) etc. If you want to keep the package within the same directory, you can use . (dot).
 
 // To run java package program
 You need to use fully qualified name e.g. mypack.Simple etc to run the class.
@@ -1591,7 +1607,8 @@ Output:Hello
 
 
 3) Using fully qualified name
-- If you use fully qualified name then only declared class of this package will be accessible. Now there is no need to import. But you need to use fully qualified name every time when you are accessing the class or interface.
+- If you use fully qualified name then only declared class of this package will be accessible. Now there is no need to import. But you need to use fully qualified
+   name every time when you are accessing the class or interface.
 
 
 - It is generally used when two packages have same class name e.g. java.util and java.sql packages contain Date class.
@@ -1614,7 +1631,8 @@ Output:Hello
 
 
 - Note: If you import a package, subpackages will not be imported.
-- If you import a package, all the classes and interface of that package will be imported excluding the classes and interfaces of the subpackages.Hence, you need to import the subpackage as well.
+- If you import a package, all the classes and interface of that package will be imported excluding the classes and interfaces of the subpackages.Hence, you need 
+  to import the subpackage as well.
 
 Note: Sequence of the program must be package then import then class.
 
@@ -1623,7 +1641,10 @@ Note: Sequence of the program must be package then import then class.
 - Package inside the package is called the subpackage. It should be created to categorize the package further.
            
 
-- Example, Sun Microsystem has definded a package named java that contains many classes like System, String, Reader, Writer, Socket etc. These classes represent a particular group e.g. Reader and Writer classes are for Input/Output operation, Socket and ServerSocket  classes  are for networking etc and so on.So, Sun has subcategorized the java package into subpackages such as lang, net, io etc. and put the Input/Output related classes in io package, Server and ServerSocket classes in net packages and so on.
+- Example, Sun Microsystem has definded a package named java that contains many classes like System, String, Reader, Writer, Socket etc. These classes represent a 
+  particular group e.g. Reader and Writer classes are for Input/Output operation, Socket and ServerSocket  classes  are for networking etc and so on.So, Sun has
+  subcategorized the java package into subpackages such as lang, net, io etc. and put the Input/Output related classes in io package, Server and ServerSocket classes
+   in net packages and so on.
 
 - The standard of defining package is domain.company.package e.g. com.javatpoint.bean or org.sssit.dao.
 
@@ -1668,8 +1689,9 @@ Output:Hello subpackage
     If you do not specify any access level, it will be the default.
 3) Protected: The access level of a protected modifier is within the package and outside the package through child class. 
     If you do not make the child class, it cannot be accessed from outside the package.
-4) Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside the package.
-- There are many non-access modifiers, such as static, abstract, synchronized, native, volatile, transient, etc. Here, we are going to learn the  access modifiers only.
+4) Public: The access level of a public modifier is everywhere. It can be accessed from within the class, outside the class, within the package and outside 
+  the package.
+- There are many non-access modifiers, such as static, abstract, synchronized, native, volatile, transient, etc. Here, we are going to learn the  access modifiersonly.
 
 
 
@@ -1677,10 +1699,10 @@ Output:Hello subpackage
 
 Access Modifier		within class	within package	  outside package by subclass only  	 outside package
 
-Private					Y				 N						  N								  N
-Default					Y				 Y						  N								  N
-Protected				Y				 Y						  Y								  N
-Public					Y				 Y						  Y								  Y
+Private			  Y		      N			  N				      N
+Default			  Y		      Y			  N				      N
+Protected		  Y		      Y			  Y				      N
+Public			  Y		      Y			  Y				      Y
 
  
 1) Private
@@ -1726,7 +1748,8 @@ Note: A class cannot be private or protected except nested class.
 
 Example of default access modifier
 
-In this example, we have created two packages pack and mypack. We are accessing the A class from outside its package, since A class is not public, so it cannot be accessed from outside the package.
+In this example, we have created two packages pack and mypack. We are accessing the A class from outside its package, since A class is not public,
+  so it cannot be accessed from outside the package.
 
 
 //save by A.java  
@@ -1811,7 +1834,8 @@ Output:Hello
 - You can use interfaces for the weaker coupling because there is no concrete implementation.
 
 // loose coupling
-- If the only knowledge that class A has about class B, is what class B has exposed through its interface, then class A and class B are said to be loosely coupled that is a a good thing.
+- If the only knowledge that class A has about class B, is what class B has exposed through its interface, then class A and class B are said to be loosely coupled
+  that is a a good thing.
 
 // Tight coupling
 - If class A relies on parts of class B that are not part of class B's interface, then the coupling between the classes is tighten that is not a good thing.
@@ -1831,7 +1855,7 @@ Output:Hello
 
 // Benefit or Advantages of Cohesion
 
-1) The key benefit of high cohesion is that such classes are typically much easier to maintain (and less frequently changed) than     classes with  low cohesion.
+1) The key benefit of high cohesion is that such classes are typically much easier to maintain (and less frequently changed) than  classes with  low cohesion.
 2) Another benefit of high cohesion is that classes with a well-focused purpose tend to be more reusable than other classes.
 
 
