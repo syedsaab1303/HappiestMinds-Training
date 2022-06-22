@@ -18,21 +18,18 @@ class Java_Outer_class{
 // Advantage of Java inner classes
 - There are three advantages of inner classes in Java. They are as follows:
 
-1) Nested classes represent a particular type of relationship that is it can access all the members (data members and methods)
-   of the outer class, including private.
+1) Nested classes represent a particular type of relationship that is it can access all the members (data members and methods) of the outer class, including private.
 2) Nested classes are used to develop more readable and maintainable code.
 3) Code Optimization: It requires less code to write.
 
 // Need of Java Inner class
-- Sometimes users need to program a class in such a way so that no other class can access it. Therefore, it would be better
-  if you include it within other classes.
+- Sometimes users need to program a class in such a way so that no other class can access it. Therefore, it would be better if you include it within other classes.
 
 
 
 // Java Anonymous inner class
-- Java anonymous inner class is an inner class without a name and for which only a single object is created. 
-   An anonymous inner class can be useful when making an instance of an object with certain "extras" such as overloading
-   methods of a class or interface, without having to actually subclass a class.
+- Java anonymous inner class is an inner class without a name and for which only a single object is created. An anonymous inner class can be useful when 
+   making an instance of an object with certain "extras" such as overloading methods of a class or interface, without having to actually subclass a class.
 
 // Java Anonymous inner class can be created in two ways:
 
