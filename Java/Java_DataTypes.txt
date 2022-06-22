@@ -23,13 +23,13 @@ There are 8 types of primitive data types:
 8) double data type
 
 
-Data Type	      		Default Value				Default size
+Data Type	      		    Default Value			    Default size
 
 boolean		        		false			      		1 bit
 char				      '\u0000'	      				2 byte
-byte				          0	       					1 byte
-short				          0       					2 byte
-int				              0		       				4 byte
+byte				          0	       				1 byte
+short				          0       				2 byte
+int				          0		       			4 byte
 long				          0L	      				8 byte
 float				          0.0f	      				4 byte
 double				          0.0d	      				8 byte
