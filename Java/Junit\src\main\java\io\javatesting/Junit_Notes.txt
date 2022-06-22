@@ -1,0 +1,52 @@
+JUnit 
+JUnit is a unit testing framework for Java programming language. JUnit has been important in the 
+development of test-driven development, and is one of a family of unit testing frameworks collectively 
+known as xUnit.
+
+
+
+// Steps
+1) Design
+2) Write code
+3) write test 
+4) Run the test
+
+The point of writing automated tests not so much to verify that the code works now.The point is to verify on an ongoing basis that the code continues to work in the future.
+
+
+// without using junit
+1) Preparation for  test (Mandatory for every test execution)
+2) Provide test inputs (Mandatory for every test execution)
+3) Run the tests
+4) Provide expected output (Mandatory for every test execution)
+5) verify result
+6) Do something to alert developer if test failed.
+
+
+// Features of JUnit
+- JUnit is an open source framework, which is used for writing and running tests.
+- Provides annotations to identify test methods.
+- JUnit tests can be run automatically and they check their own results and provide immediate feedback. There's no need to manually comb through a report of test result
+- JUnit tests allow you to write codes faster, which increases quality.
+- Provides test runners for running tests.
+
+// Dependencies add
+
+-> junit-jupiter-api: API for writing tests using JUnit Jupiter
+
+-> junit-jupiter-engine: implementation of the TestEngine API for JUnit Jupiter
+
+-> junit-vintage-engine: A thin layer on top of JUnit 4 to allow running vintage tests
+
+
+
+@Test
+1) Marks a method as a test
+2) Informs the JUnit engine what methods need to run.
+
+
+
+
+
+
+
