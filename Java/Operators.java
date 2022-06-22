@@ -22,26 +22,26 @@ Java Operator Precedence
 Operator Type	           Category	                 Precedence
 
 Unary	                   postfix	                 expr++ ,  expr--
-                      	   prefix                    ++expr , --expr,  +expr,  -expr, ~, !
+                      	   prefix                        ++expr , --expr,  +expr,  -expr, ~, !
 
-Arithmetic	               multiplicative	           *,  / ,  %
-                      	   additive	                   +,  -
+Arithmetic	           multiplicative	         *,  / ,  %
+                      	   additive	                 +,  -
 
-Shift                  	   shift	                   <<,   >>,  >>>
+Shift                  	   shift	                 <<,   >>,  >>>
 
-Relational	               comparison         	      < ,>, <=, >=, instanceof
-                      	   equality	                  ==,  !=
+Relational	           comparison         	         < ,>, <=, >=, instanceof
+                      	   equality	                 ==,  !=
 
 Bitwise	                   bitwise AND	                    &
-                      	   bitwise exclusive OR	     		^
-                      	   bitwise inclusive OR	 		    |
+                      	   bitwise exclusive OR	     	    ^
+                      	   bitwise inclusive OR	 	    |
 
-Logical	                   logical AND               		&&
-                      	   logical OR	                	||
+Logical	                   logical AND                     &&
+                      	   logical OR	                   ||
 
-Ternary	                   ternary               	   		? :
+Ternary	                   ternary               	   ? :
 
-Assignment	               assignment	               =, +=, -=, *=, /=, %=, &=, ^=, |=, <<=, >>=, >>>=
+Assignment	           assignment	               =, +=, -=, *=, /=, %=, &=, ^=, |=, <<=, >>=, >>>=
 
 
 
