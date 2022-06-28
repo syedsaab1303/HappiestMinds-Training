@@ -106,4 +106,8 @@ FROM customer AS cust
 NATURAL JOIN balance AS bal;  
 
 
+Natural Join     vs    Equi Join	 vs    Inner Join
+Natural Join :- It joins the tables based on the same column names and their data types.
+Equi Join    :- It joins the tables based on the equality or matching column values in the associated tables.	
+Inner Join   :- It joins the tables based on the column name specified in the ON clause explicitly. It returns only those rows that exist in both tables.
 
