@@ -1,0 +1,108 @@
+// MySQL Joining Tables
+- A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
+
+// Supported Types of Joins in MySQL
+1) INNER JOIN: Returns records that have matching values in both tables
+2) LEFT JOIN: Returns all records from the left table, and the matched records from the right table
+3) RIGHT JOIN: Returns all records from the right table, and the matched records from the left table
+4) CROSS JOIN: Returns all records from both tables
+
+
+// MySQL INNER JOIN Keyword
+- The INNER JOIN keyword selects records that have matching values in both tables.
+
+// INNER JOIN Syntax
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+- Note: The INNER JOIN keyword selects all rows from both tables as long as there is a match between the columns. If there are records in the "Orders" table that do not have matches in "Customers", these orders will not be shown!
+
+
+// MySQL LEFT JOIN Keyword (MySQL LEFT OUTER JOIN)
+- The LEFT JOIN keyword returns all records from the left table (table1), and the matching records (if any) from the right table (table2).
+
+// LEFT JOIN Syntax
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+
+- Note: The LEFT JOIN keyword returns all records from the left table (Customers), even if there are no matches in the right table (Orders).
+
+
+// MySQL RIGHT JOIN Keyword (MySQL RIGHT OUTER JOIN)
+- The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records (if any) from the left table (table1).
+
+// RIGHT JOIN Syntax
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+
+- Note: The RIGHT JOIN keyword returns all records from the right table (Employees), even if there are no matches in the left table (Orders).
+
+
+//MySQL CROSS JOIN Keyword
+- The CROSS JOIN keyword returns all records from both tables (table1 and table2).
+
+// CROSS JOIN Syntax
+SELECT column_name(s)
+FROM table1
+CROSS JOIN table2;
+
+- Note: CROSS JOIN can potentially return very large result.
+
+
+Note: The CROSS JOIN keyword returns all matching records from both tables whether the other table matches or not. 
+
+If you add a WHERE clause (if table1 and table2 has a relationship), the CROSS JOIN will produce the same result as the INNER JOIN clause:
+
+
+// MySQL Self Join
+- A self join is a regular join, but the table is joined with itself.
+
+// Self Join Syntax
+SELECT column_name(s)
+FROM table1 T1, table1 T2
+WHERE condition;
+T1 and T2 are different table aliases for the same table.
+
+
+
+// MySQL EquiJoin
+- An equijoin is an operation that combines multiple tables based on equality or matching column values in the tables.
+
+// Points to remember:
+1) There is no need to be the same column names.
+2) The resultant result can have repeated column names.
+
+// syntax
+SELECT column_name (s)  
+FROM table_name1, table_name2, ...., table_nameN  
+WHERE table_name1.column_name = table_name2.column_name;  
+
+
+// MySQL Natural Join
+- A natural join combining tables based on columns with the same name and data type.
+
+// Points to remember:
+1) There is no need to specify the column names to join.
+2) The resultant table always contains unique columns.
+
+// Syntax:
+- The following is a basic syntax to illustrate the natural join:
+
+SELECT [column_names | *]   
+FROM table_name1   
+NATURAL JOIN table_name2;  
+
+
+for eg:-
+SELECT cust. customer_name, bal.balance   
+FROM customer AS cust   
+NATURAL JOIN balance AS bal;  
+
+
+
