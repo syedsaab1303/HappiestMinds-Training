@@ -1,0 +1,96 @@
+// DDL
+- DDL is short name of Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database.
+
+1) CREATE - to create a database and its objects like (table, index, views, store procedure, function, and triggers)
+2) ALTER - alters the structure of the existing database
+3) DROP - delete objects from the database
+4) TRUNCATE - remove all records from a table, including all spaces allocated for the records are removed
+5) RENAME - rename an object
+
+
+// 1) CREATE
+- The CREATE DATABASE statement is used to create a new SQL database.
+
+// Syntax
+CREATE DATABASE databasename;
+
+- Once a database is created, you can check it in the list of databases with the following SQL command: SHOW DATABASES;
+
+-> The MySQL CREATE TABLE Statement
+- The CREATE TABLE statement is used to create a new table in a database.
+
+// Syntax
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+- datatype column can hold (e.g. varchar, integer, date, etc.).
+
+
+
+
+// 2) DROP 
+- The DROP DATABASE statement is used to drop an existing SQL database.
+
+// Syntax
+DROP DATABASE databasename;
+
+Note: Be careful before dropping a database. Deleting a database will result in loss of complete information stored in the database!
+
+Once a database is dropped, you can check it in the list of databases with the following SQL command: SHOW DATABASES;
+
+- The DROP TABLE statement is used to drop an existing table in a database.
+
+// Syntax
+DROP TABLE table_name;
+
+
+
+// 3) TRUNCATE
+The TRUNCATE TABLE statement is used to delete the data inside a table, but not the table itself.
+
+// Syntax
+TRUNCATE TABLE table_name;
+
+
+
+// 4) ALTER
+The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+
+The ALTER TABLE statement is also used to add and drop various constraints on an existing table.
+
+
+// ALTER TABLE - ADD Column
+- To add a column in a table, use the following syntax:
+
+ALTER TABLE table_name ADD column_name datatype;
+
+
+// ALTER TABLE - DROP COLUMN
+To delete a column in a table, use the following syntax (notice that some database systems don't allow deleting a column):
+
+ALTER TABLE table_name DROP COLUMN column_name;
+
+
+// ALTER TABLE - MODIFY COLUMN
+To change the data type of a column in a table, use the following syntax:
+
+ALTER TABLE table_name MODIFY COLUMN column_name datatype;
+
+
+5) RENAME
+
+We can use ALTER TABLE to rename the name of table.
+
+// Syntax  
+ALTER TABLE table_name RENAME TO new_table_name;
+
+- Columns can be also be given new name with the use of ALTER TABLE.
+
+// Syntax:
+
+ALTER TABLE table_name RENAME COLUMN old_name TO new_name;
+
+
