@@ -27,6 +27,11 @@ ON table1.column_name = table2.column_name;
 
 - Note: The INNER JOIN keyword selects all rows from both tables as long as there is a match between the columns.
 
+// Theta Join or Conditional Join
+Theta join= cross product +  join condition on attribute(s) of both the relation + Comparison operator
+
+Join condition = pair of attribute(s) means same name , different name
+Comparison operator :-  > , < , = , >= , <= , != , <>
 
 // MySQL EquiJoin
 - An equijoin is an operation that combines multiple tables based on equality or matching column values in the tables.
