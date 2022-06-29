@@ -1,0 +1,71 @@
+Data Manipulation Language (DML) commands:
+
+DML is short name of Data Manipulation Language which deals with data manipulation and includes most common SQL statements such SELECT, INSERT, UPDATE, DELETE, etc., and it is used to store, modify, retrieve, delete and update data in a database.
+
+SELECT  Retrieve data from the database.
+INSERT to insert a new row.
+UPDATE to update an existing row.
+DELETE to delete a row.
+
+
+
+1) SELECT
+- Select command is used to retrieve data from the database.
+
+// Syntax
+SELECT column1, column2, ... FROM table_name;
+SELECT * from <table_name>;
+
+// Example
+SELECT * from Employee;
+
+
+2) INSERT
+- Insert command is used to insert data into a table.
+- It is possible to write the INSERT INTO statement in two ways:
+
+1. Specify both the column names and the values to be inserted:
+
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+2. If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. Here, the INSERT INTO syntax would be as follows:
+
+INSERT INTO table_name VALUES (value1, value2, value3, ...);
+
+// Example
+- Insert into Employee(Emp_id, Emp_name) values (001, “ bhanu”);
+
+
+3) UPDATE
+- Update command is used to update existing data within a table.
+
+// Syntax
+- UPDATE <table_name> SET column_number =value_number WHERE condition;
+
+// Example
+ UPDATE Employee SET Emp_name= Ram WHERE Emp_id= 001;
+
+Note: Be careful when updating records in a table! Notice the WHERE clause in the UPDATE statement. The WHERE clause specifies which record(s) that should be updated. If you omit the WHERE clause, all records in the table will be updated!
+
+
+4) DELETE
+- Delete command is used to delete records from a database table.
+
+// Syntax
+Delete from <table_name> WHERE condition;
+
+// Example
+DELETE from Employee WHERE Emp_id=002;
+
+Note: Be careful when deleting records in a table! Notice the WHERE clause in the DELETE statement. The WHERE clause specifies which record(s) should be deleted. If you omit the WHERE clause, all records in the table will be deleted!
+
+
+// Delete All Records
+- It is possible to delete all rows in a table without deleting the table. This means that the table structure, attributes, and indexes will be intact:
+
+// syntax
+DELETE FROM table_name;
+
+
+
