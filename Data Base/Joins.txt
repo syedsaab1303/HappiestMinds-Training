@@ -1,6 +1,14 @@
 // MySQL Joining Tables
 - A JOIN clause is used to combine rows from two or more tables, based on a related column between them.
 
+// Types of Join
+- There are mainly two types of joins in DBMS:
+
+1) Inner Joins: Theta, Natural, EQUI
+2) Outer Join: Left, Right, Full
+
+
+
 // Supported Types of Joins in MySQL
 1) INNER JOIN: Returns records that have matching values in both tables
 2) LEFT JOIN: Returns all records from the left table, and the matched records from the right table
@@ -17,59 +25,7 @@ FROM table1
 INNER JOIN table2
 ON table1.column_name = table2.column_name;
 
-- Note: The INNER JOIN keyword selects all rows from both tables as long as there is a match between the columns. If there are records in the "Orders" table
-         that do not have matches in "Customers", these orders will not be shown!
-
-
-// MySQL LEFT JOIN Keyword (MySQL LEFT OUTER JOIN)
-- The LEFT JOIN keyword returns all records from the left table (table1), and the matching records (if any) from the right table (table2).
-
-// LEFT JOIN Syntax
-SELECT column_name(s)
-FROM table1
-LEFT JOIN table2
-ON table1.column_name = table2.column_name;
-
-- Note: The LEFT JOIN keyword returns all records from the left table (Customers), even if there are no matches in the right table (Orders).
-
-
-// MySQL RIGHT JOIN Keyword (MySQL RIGHT OUTER JOIN)
-- The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records (if any) from the left table (table1).
-
-// RIGHT JOIN Syntax
-SELECT column_name(s)
-FROM table1
-RIGHT JOIN table2
-ON table1.column_name = table2.column_name;
-
-- Note: The RIGHT JOIN keyword returns all records from the right table (Employees), even if there are no matches in the left table (Orders).
-
-
-//MySQL CROSS JOIN Keyword
-- The CROSS JOIN keyword returns all records from both tables (table1 and table2).
-
-// CROSS JOIN Syntax
-SELECT column_name(s)
-FROM table1
-CROSS JOIN table2;
-
-- Note: CROSS JOIN can potentially return very large result.
-
-
-Note: The CROSS JOIN keyword returns all matching records from both tables whether the other table matches or not. 
-
-If you add a WHERE clause (if table1 and table2 has a relationship), the CROSS JOIN will produce the same result as the INNER JOIN clause:
-
-
-// MySQL Self Join
-- A self join is a regular join, but the table is joined with itself.
-
-// Self Join Syntax
-SELECT column_name(s)
-FROM table1 T1, table1 T2
-WHERE condition;
-T1 and T2 are different table aliases for the same table.
-
+- Note: The INNER JOIN keyword selects all rows from both tables as long as there is a match between the columns.
 
 
 // MySQL EquiJoin
@@ -106,8 +62,82 @@ FROM customer AS cust
 NATURAL JOIN balance AS bal;  
 
 
-Natural Join     vs    Equi Join	 vs    Inner Join
+// Natural Join   vs      Equi Join	 vs    Inner Join
 Natural Join :- It joins the tables based on the same column names and their data types.
 Equi Join    :- It joins the tables based on the equality or matching column values in the associated tables.	
 Inner Join   :- It joins the tables based on the column name specified in the ON clause explicitly. It returns only those rows that exist in both tables.
+
+
+// MySQL Self Join
+- A self join is a regular join, but the table is joined with itself.
+
+// Self Join Syntax
+SELECT column_name(s)
+FROM table1 T1, table1 T2
+WHERE condition;
+T1 and T2 are different table aliases for the same table.
+
+// Outer Join
+- Three types of Outer Joins are:
+
+1) Left Outer Join
+2) Right Outer Join
+3) Full Outer Join
+
+
+// MySQL LEFT JOIN Keyword (MySQL LEFT OUTER JOIN)
+- The LEFT JOIN keyword returns all records from the left table (table1), and the matching records (if any) from the right table (table2).
+
+// LEFT JOIN Syntax
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+
+- Note: The LEFT JOIN keyword returns all records from the left table (Customers), even if there are no matches in the right table (Orders).
+
+
+// MySQL RIGHT JOIN Keyword (MySQL RIGHT OUTER JOIN)
+- The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records (if any) from the left table (table1).
+
+// RIGHT JOIN Syntax
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+
+- Note: The RIGHT JOIN keyword returns all records from the right table (Employees), even if there are no matches in the left table (Orders).
+
+// Full Outer Join
+- In a Full Outer Join , all tuples from both relations are included in the result, irrespective of the matching condition.
+
+
+//MySQL CROSS JOIN Keyword
+- The CROSS JOIN keyword returns all records from both tables (table1 and table2).
+
+// CROSS JOIN Syntax
+SELECT column_name(s)
+FROM table1
+CROSS JOIN table2;
+
+- Note: CROSS JOIN can potentially return very large result.
+
+
+Note: The CROSS JOIN keyword returns all matching records from both tables whether the other table matches or not. 
+
+If you add a WHERE clause (if table1 and table2 has a relationship), the CROSS JOIN will produce the same result as the INNER JOIN clause:
+
+
+// Difference between Cross join and full outer join
+- For SQL Server, CROSS JOIN and FULL OUTER JOIN are different. CROSS JOIN is simply Cartesian Product of two tables, irrespective of any filter criteria or any
+  condition. FULL OUTER JOIN gives unique result set of LEFT OUTER JOIN and RIGHT OUTER JOIN of two tables. It also needs ON clause to map two columns of tables.
+for eg:-  Table 1 contains 10 rows and Table 2 contains 20 rows with 5 rows matching on specific columns.Then CROSS JOIN will return 10*20=200 rows in result set.
+          FULL OUTER JOIN will return 25 rows in result set. INNER JOIN will return matching rows, hence, 5 rows in result set. FULL OUTER JOIN (or any other JOIN) 
+          always returns result set with less than or equal to Cartesian Product number.
+          Number of rows returned by FULL OUTER JOIN equal to (No. of Rows by LEFT OUTER JOIN) + (No. of Rows by RIGHT OUTER JOIN) - (No. of Rows by INNER JOIN).
+
+
+
+
+
 
