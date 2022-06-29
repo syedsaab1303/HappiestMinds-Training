@@ -1,0 +1,78 @@
+//                  ER Diagram in DBMS
+
+
+// Entity Relationship Diagram
+- An Entity–relationship model (ER model) describes the structure of a database with the help of a diagram, which is known as Entity Relationship Diagram (ER Diagram). An ER model is a design or blueprint of a database that can later be implemented as a database. The main components of E-R model are: entity set and relationship set.
+
+// What is an Entity Relationship Diagram (ER Diagram)?
+An ER diagram shows the relationship among entity sets. An entity set is a group of similar entities and these entities can have attributes. In terms of DBMS, an entity is a table or attribute of a table in database, so by showing relationship among tables and their attributes, ER diagram shows the complete logical structure of a database.
+
+
+Rectangle: Entity sets.
+Ellipses: Attributes
+Diamonds: Relationship Set
+Lines: They link attributes to Entity Sets and Entity sets to Relationship Set
+Double Ellipses: Multivalued Attributes
+Dashed Ellipses: Derived Attributes
+Double Rectangles: Weak Entity Sets
+Double Lines: Total participation of an entity in a relationship set
+
+// Components of a ER Diagram
+
+- An ER diagram has three main components:
+1. Entity
+2. Attribute
+3. Relationship
+
+1. Entity
+- An entity is an object or component of data. An entity is represented as rectangle in an ER diagram.
+For example: We have two entities Student and College and these two entities have many to one relationship as many students study in a single college.
+
+
+// Weak Entity:
+- An entity that cannot be uniquely identified by its own attributes and relies on the relationship with other entity is called weak entity. The weak entity is represented by a double rectangle. For example – a bank account cannot be uniquely identified without knowing the bank to which the account belongs, so bank account is a weak entity.
+
+2. Attribute
+An attribute describes the property of an entity. An attribute is represented as Oval in an ER diagram. There are four types of attributes:
+
+1. Key attribute
+2. Composite attribute
+3. Multivalued attribute
+4. Derived attribute
+
+1. Key attribute
+- A key attribute can uniquely identify an entity from an entity set. For example, student roll number can uniquely identify a student from a set of students. Key attribute is represented by oval same as other attributes however the text of key attribute is underlined.
+
+2. Composite attribute
+- An attribute that is a combination of other attributes is known as composite attribute. For example, In student entity, the student address is a composite attribute as an address is composed of other attributes such as pin code, state, country.
+
+3. Multivalued attribute
+- An attribute that can hold multiple values is known as multivalued attribute. It is represented with double ovals in an ER Diagram. For example – A person can have more than one phone numbers so the phone number attribute is multivalued.
+
+4. Derived attribute
+- A derived attribute is one whose value is dynamic and derived from another attribute. It is represented by dashed oval in an ER Diagram. For example – Person age is a derived attribute as it changes over time and can be derived from another attribute (Date of birth).
+
+
+
+3. Relationship
+- A relationship is represented by diamond shape in ER diagram, it shows the relationship among entities. There are four types of relationships:
+1. One to One
+2. One to Many
+3. Many to One
+4. Many to Many
+
+1. One to One Relationship
+- When a single instance of an entity is associated with a single instance of another entity then it is called one to one relationship. For example, a person has only one passport and a passport is given to one person.
+
+2. One to Many Relationship
+- When a single instance of an entity is associated with more than one instances of another entity then it is called one to many relationship. For example – a customer can place many orders but a order cannot be placed by many customers.
+
+3. Many to One Relationship
+- When more than one instances of an entity is associated with a single instance of another entity then it is called many to one relationship. For example – many students can study in a single college but a student cannot study in many colleges at the same time.
+
+4. Many to Many Relationship
+- When more than one instances of an entity is associated with more than one instances of another entity then it is called many to many relationship. For example, student can be assigned to many projects and a project can be assigned to many students.
+
+
+
+
