@@ -87,5 +87,10 @@ An attribute describes the property of an entity. An attribute is represented as
   For example, student can be assigned to many projects and a project can be assigned to many students.
 
 
+// Participation Constraints
+1) Total Participation − Each entity is involved in the relationship. Total participation is represented by double lines.
+
+2) Partial participation − Not all entities are involved in the relationship. Partial participation is represented by single lines.
+
 
 
