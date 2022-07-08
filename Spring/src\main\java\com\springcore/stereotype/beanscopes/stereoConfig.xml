@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	<context:component-scan base-package="com.springcore.stereotype.beanscopes" />
+
+	<util:map map-class="java.util.HashMap" id="route"> 
+		<entry key="Ujjain"  value="70" />
+		<entry key="Indore"  value="130" />
+		<entry key="Soyat"  value="80" />
+	</util:map>
+	<util:map map-class="java.util.HashMap" id="mymap">   <!--  ye id Driver.java me match hogi and  ye  SpEL (Spring Expression Language )hai -->
+		<entry key="Java" value="10" />
+		<entry key="C++" value="8" />
+		<entry key="Python" value="6" />
+		<entry key="C" value="4" />
+	</util:map>
+	
+	<bean class="com.springcore.stereotype.beanscopes.Teacher" name="teacher" scope="prototype" />
+		
+</beans>
+

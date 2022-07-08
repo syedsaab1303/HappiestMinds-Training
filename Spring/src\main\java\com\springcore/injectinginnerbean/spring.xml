@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"  "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="triangle" class="com.beanpostprocessor.Triangle">
+
+		<property name="pointA" ref="pointA" />
+
+		<property name="pointB">
+			<bean class="com.beanpostprocessor.Point">
+				<property name="x" ref="20" />
+				<property name="y" ref="0" />
+			</bean>
+		</property>
+		<!-- - Inner beans are beans that are defined within the scope of another 
+			bean. Thus, a <bean/> element inside the <property/> or <constructor-arg/> 
+			elements is called inner bean. 
+			
+			// Advantage
+			 1) The advantages of inner bean is that we have isolated bean only where it's required since this bean is 
+			required only inside the triangle it does not come up as a seperate bean 
+			
+			2) Second thing is we does not need to specify an ID for this inner bean 
+			because an ID is required only when we are referencing the bean from somewhere 
+			else either by using ref or by using bean where we give the ID again -->
+		<property name="pointC">
+			<bean class="com.beanpostprocessor.Point">
+				<property name="x" ref="20" />
+				<property name="y" ref="0" />
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="pointA" class="com.beanpostprocessor.Point">
+		<property name="x" ref="0" />
+		<property name="y" ref="0" />
+	</bean>
+	<!-- This id="pointA" bean is common for all so we doesn't take it as an 
+		inner bean -->
+
+	<alias name="triangle" alias="triangle-alias" />
+
+</beans>
+
