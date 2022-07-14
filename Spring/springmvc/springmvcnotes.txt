@@ -1,0 +1,90 @@
+
+		
+	Spring MVC(REST APIs)
+
+		
+- In spring MVC we choose maven project in which we choose Artifact ID maven-archetype-webapp 1.0
+- Now then we add a server 
+- Adding server :- Window -> show view -> Server -> Add server  (for removing error)
+- Then  add springMCV dependency
+
+// Configure and code our spring MVC project in 5 step:-
+1) Configure the dispatcher servlet in web.xml
+2) create Spring Configuration file.  means .xml file in WEB-INF which have the naming convention of servletname-servlet.xml
+3) Configure View Resolver
+4) Create Controller
+5) Create a view to show(page)
+		
+// Sending data from Controller to view	
+	 Sending data from Controller to view with the help of Model object and ModelandView object	
+		
+           In Model                                    ModelandView
+Method:-addAttribute(String key, Object value)      addObject(String key, Object value)
+		
+NOTE:- 1)	<!--  here view is jsp -->
+	   2)   <%--  comment given in jsp.  --%>  	
+	   3)	we have to add jstl dependency also
+		
+		
+NOTE:- for using jstl we have to add dependency of jstl and also add jstl uri
+	  which is taglib library     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+		
+		
+		<!-- this  is expression language format ${  } -->
+		
+// Sending data from View to Controller
+			
+1) we have to get complete data within a single time with the  help of @ModelAttribute
+2) we have to get single data with the  help of @RequestParam
+		
+		@RequestMapping annotation is used to  map the url ("/" or "/home") onto a entire class or a particular handler method 
+		
+		
+		// Parameter using RequestParam annotation are required by default(true) but you can specify that a parameter is optional by setting @RequiredParam's required attribute to false.
+		
+				
+// Handling form with @ModelAttribute Annotation
+- with the help of model attribute we can reduce the line of code.		
+		
+		
+// This is the way of work we follow in professional 
+ 1) database layer -> userDao-> service layer -> controller layer	
+	
+	
+// how  to redirect in spring MVC
+0) HttpServletResponse
+1) redirect prefix
+	
+public String handler()
+{
+return "redirect:/url"
+}
+	
+2) RedirectView	
+public RedirectView handler()
+{
+RedirectView r = new RedirectView();
+r.setUrl();
+return r;
+}	
+
+Note:-  We have to work with multiple controller in springmvc .For making any class controller use @Controller and then we have to enable that controller in .xml class i.e. 
+	<context:component-scan base-package="springmvc"></context:component-scan>	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
