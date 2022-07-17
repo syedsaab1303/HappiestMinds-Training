@@ -1,0 +1,54 @@
+AOP(Aspect Oriented Programming)
+
+1) What is AOP
+2) Understanding AOP with  Example
+3) Terminology of AOP , Aspect , Advice , Joinpoint , Pointcut etc.
+4) Implementing AOP with Spring
+5) Maven Project,  Adding AOP related Dependencies
+6) Creating payment Services
+7) Adding AOP in our Payment Services.
+
+1) What is AOP?
+- AOP is a programming paradigm that aims to increase modularity by allowing the seperation of cross-cutting concerns.(koi bhi service chal rhi uske beech me code ko insert krna without modifying that code)
+- Process of applying services or external services as transaction management or logging to our application classes without modifying the code.
+- This services also called cross cutting concern
+- Aspect-Oriented Programming(AOP) complements Object-Oriented Programming(OOP) by providing another way of thinking about  program  structure.
+
+
+
+// AOP Terminologies
+1) Aspect:- This is a module which has a set of APIs providing cross-cutting requirements. For example, a logging module would be called AOP aspect for logging. An application can have any number of aspects depending on the requirement.
+  (Aspect ke andar hm wo code rakhege jise hme beech me insert krna hai)
+
+2) Join point:- This represents a point in your application where you can plug-in the AOP aspect. You can also say, it is the actual place in the application where an action will be taken using Spring AOP framework.
+   (join point hmare program ka wo point jha koi code or method execute ho rha hai or exception aa rhi hai, but spring support only method execution)
+
+3) Advice:- Advice represent an action taken by an aspect at particular join point.
+   (for eg. advice is like method and aspect is like class , so advice is an action taken by aspect at particular join point)
+   
+4) Pointcut:- It is an expression of AOP that marches join point.
+
+
+// Types of Advice
+1) before:- Run advice before the method execution.
+
+2) after:- Run advice after the method execution.
+
+3) after-returning:- Run advice after the a method execution only if method completes successfully.
+
+4) after-throwing:- Run advice after the a method execution only if method exits by throwing an exception.
+
+
+// Dependencies add in AOP Project
+1) Spring core
+2) Spring context
+3) spring AOP
+4) aspectjrt
+5) aspectjweaver
+
+
+
+
+
+
+
