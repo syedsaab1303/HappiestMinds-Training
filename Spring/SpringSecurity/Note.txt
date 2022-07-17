@@ -1,0 +1,37 @@
+// Spring Security
+- Spring Security is used to secure the Webapplication of spring. Spring boot security automate the configuration which we do manually in spring.
+- The spring starter boot security dependency we add to automate  the configuration.
+
+// Important Terms
+1)Authentication:- Authentication is used to check the identity of user and if user is verified then user get access whom they claim to be.
+
+2) Authorization:- Giving the user permission to access a specific resource or function.
+
+3) Filter:- A filter is an object that is invoked at the preprocessing and postprocessing of a request.
+  (servlet or controller tk request jane se pehle spring security filter ki help leta request ko intercept and validate krne ke liye)
+
+( Working of spring security.
+ request client se jayegi filter ke pass , filter wo request accept kr lege and forward kr dege authentication manager ke pass and authentication manager authentication provider ka use krege,Authentication Manager ye nhi smjh payega ki konsa authentication provider suitable hai to ye provider manager ko call krega ,provider manager check krega ki konsa authentication provider suitable hai hmari request ko authentic krne ke liye , authentication provider
+ authenticate method ko call krke UserDetailService method ki help lekr user ko validate kr lete , if user is validate then filter ke pass request aati ki user validate ho gya hai then filter forward that respond to client ,if valiation is fail then filter(authenticate) me false aayega and response wapas chala jayega means validation is not done)
+
+// Dependency Add
+1) Spring Web
+
+Note:-  There is no need to adding server in spring Boot bcoz spring Boot internal provide servere which run on 8080 port no.
+
+
+Adding Spring Boot Security
+
+
+- for changing port in spring boot go to application.properties and type server.port=any no.
+
+
+
+
+
+
+@SpringBootApplication is the combination of @Configuration  @EnableAutoConfiguration @ComponentScan
+
+
+
+
